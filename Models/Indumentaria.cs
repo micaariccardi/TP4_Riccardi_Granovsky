@@ -4,7 +4,7 @@ public class Indumentaria
     public string pantalon {get; private set;}
     public string camiseta {get; private set;}
 
-    Indumentaria(string m, string p, string c)
+    public Indumentaria(string m, string p, string c)
     {
         medias = m;
         pantalon = p;
