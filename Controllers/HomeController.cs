@@ -29,5 +29,6 @@ public class HomeController : Controller
             Indumentaria x = new Indumentaria(Equipos.listaMedias[media], Equipos.listaPantalones[pantalon], Equipos.listaCamisetas[remera]);
             Equipos.IngresarIndumentaria(Equipos.listaEquipos[equipo], x);
         }
+        return View(Index);
     }
 }
