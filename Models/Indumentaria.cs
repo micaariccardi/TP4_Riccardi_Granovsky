@@ -1,8 +1,8 @@
 public class Indumentaria
 {
-    string medias {get; private set;}
-    string pantalon {get; private set;}
-    string camiseta {get; private set;}
+    public string medias {get; private set;}
+    public string pantalon {get; private set;}
+    public string camiseta {get; private set;}
 
     Indumentaria(string m, string p, string c)
     {
