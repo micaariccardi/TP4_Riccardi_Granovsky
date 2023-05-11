@@ -1,0 +1,69 @@
+@{
+    ViewData["Seleccionar indumentaria"] = "SelectIndumentaria";
+}
+
+<h1>Selecciona indumentaria</h1>
+
+<form action='@Url.Action("GuardarIndumentaria")'>
+    <label>Elegi un equipo:</label>
+    <select name="equipo" id="equipo" required>
+        @for(int i = 0; i < ViewBag.listaEquipos.Count; i++)
+        {
+            <option value=@i>@ViewBag.listaEquipos[i]</option>
+        }
+    </select>
+
+    <br>
+
+        @for(int i = 0; i < ViewBag.camisetas.Count; i++)
+        {
+            <label>@(i+1) .</label>
+            <img src = "/imagenes/@ViewBag.camisetas[i]" height=170px>
+        }
+
+    <br>
+
+    <label>Elegi una camiseta:</label>
+
+    <select name="remera" id="remera" required>
+        @for(int i = 0; i < ViewBag.listaEquipos.Count; i++)
+        {
+            <option value=@i>@(i+1)</option>
+        }
+    </select>
+
+    <br>
+        @for(int i = 0; i < ViewBag.pantalones.Count; i++)
+        {
+            <label>@(i+1) .</label>
+            <img src = "/imagenes/@ViewBag.pantalones[i]" height=160px >
+        }
+
+    <br>
+
+    <label>Elegi un pantalón:</label>
+    <select name="pantalon" id="pantalon" required>
+        @for(int i = 0; i < ViewBag.listaEquipos.Count; i++)
+        {
+            <option value=@i>@(i+1)</option>
+        }
+    </select>
+
+    <br>
+        @for(int i = 0; i < ViewBag.medias.Count; i++)
+        {
+            <label>@(i+1) .</label>
+            <img src = "/imagenes/@ViewBag.medias[i]" height=180px >
+        }
+    <br>
+
+    <label>Elegi unas medias:</label>
+    <select name="media" id="media" required>
+        @for(int i = 0; i < ViewBag.listaEquipos.Count; i++)
+        {
+            <option value=@i>@(i+1)</option>
+        }
+    </select>
+    <br>
+    <input type="submit" value ="Enviar">
+</form>
